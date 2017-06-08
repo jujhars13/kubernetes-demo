@@ -14,3 +14,20 @@ Kubernetes wow demo
 - [] hit application
 - [] scale application up to handle load
 - [] tear down kubernetes cluster
+
+
+## Demo
+
+
+### Scaling up
+`kubectl apply -f kubernetes/pod.yml`
+
+### Scaling Down
+`kubectl apply -f kubernetes/pod.yml`
+
+### Updating to new version
+`kubectl rolling-update tech-conf-2017`
+
+### Rolling Back
+
+`kubectl rolling-update tech-conf-2017 --rollback`

@@ -20,18 +20,18 @@ if [ $? -ne 0 ]; then
 fi
 
 #build nginx container
-gcloud docker -- build -f Dockerfile.nginx -t ${nginxContainerName}:$1 ./
+gcloud docker -- build -t ${nginxContainerName}:$1 ./
 
 #deploy container to GCR
 gcloud docker -- push ${nginxContainerName}:$1
 
 #create nginx configMap
 kubectl create configmap nginx-conf \
---from-file=build/nginx/conf.d/gke.conf
+--from-file=build/nginx/conf.d/default.conf
 
 #create nginx secrets
 kubectl create secret generic nginx-secret \
---from-file build/nginx/tls-certs
+--from-file build/nginx/certs
 
 #run in kubernetes
 kubectl apply -f kubernetes/pod.yml

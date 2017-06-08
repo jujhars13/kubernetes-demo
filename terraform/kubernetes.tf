@@ -18,9 +18,10 @@ resource "google_container_cluster" "cluster" {
     username = "admin"
     password = "super.secret"
   }
+
   node_config {
     machine_type = "n1-standard-2"
-    disk_size_gb = "10s"
+    disk_size_gb = "10"
     oauth_scopes = [
       "https://www.googleapis.com/auth/compute",
       "https://www.googleapis.com/auth/devstorage.read_only",

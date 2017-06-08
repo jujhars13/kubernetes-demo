@@ -10,7 +10,7 @@ services:
       - "80:80"
     volumes:
       - ./build/nginx/conf.d/local.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./build/nginx/tls-certs:/etc/nginx/certs:ro
+      - ./build/nginx/certs:/etc/nginx/certs:ro
       - ./public:/public
      # sudo openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout kubernetes.jujhar.com.key -out kubernetes.jujhar.com.crt
      # sudo openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout localhost.key -out localhost.crt
