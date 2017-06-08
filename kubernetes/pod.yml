@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: tech-conf-2017
 spec:
-  replicas: 6
+  replicas: 1
   template:
     metadata:
       labels:
@@ -21,7 +21,7 @@ spec:
       containers:
 
       - name: nginx
-        image: eu.gcr.io/tech-conf-2017/super-duper-app:4
+        image: eu.gcr.io/tech-conf-2017/super-duper-app:2
         imagePullPolicy: Always
         ports:
         - containerPort: 443

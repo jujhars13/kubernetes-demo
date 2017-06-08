@@ -28,7 +28,7 @@ Kubernetes wow demo
 `kubectl apply -f kubernetes/pod.yml`
 
 ### Updating to new version
-`kubectl rolling-update tech-conf-2017`
+`kubectl rolling-update tech-conf-2017 --image eu.gcr.io/tech-conf-2017/super-duper-app:3`
 
 ### Rolling Back
 
