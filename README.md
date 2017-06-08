@@ -18,6 +18,8 @@ Kubernetes wow demo
 
 ## Demo
 
+### Watch pods
+`kubectl get pods -w`
 
 ### Scaling up
 `kubectl apply -f kubernetes/pod.yml`
