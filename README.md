@@ -3,7 +3,7 @@ Kubernetes wow demo
 
 ## Todo
 
-- [] setup basic project
+- [x] setup basic project
 - [] create GCP project
 - [] create node container and push to docker hub
 - [] create pod spec
