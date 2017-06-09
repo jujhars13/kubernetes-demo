@@ -4,22 +4,23 @@ Kubernetes wow demo
 ## Todo
 
 - [x] setup basic project
-- [] create GCP project
-- [] create node container and push to docker hub
-- [] create pod spec
-- [] create vegita container and pod spec
-- [] create kubernetes cluster yaml
-- [] push application pod
-- [] push vegita pod
-- [] hit application
-- [] scale application up to handle load
-- [] tear down kubernetes cluster
+- [x] create GCP project
+- [x] create node container and push to docker hub
+- [x] create pod spec
+- [x] create kubernetes cluster yaml
+- [x] push application pod
+- [x] hit application
+- [x] scale application up to handle load
+- [x] tear down kubernetes cluster
 
 
 ## Demo
 
 ### Watch pods
 `kubectl get pods -w`
+
+### Kick off
+`kubectl apply -f kubernetes/pod.yml`
 
 ### Updating to new version
 `kubectl rolling-update tech-conf-2017 --image eu.gcr.io/tech-conf-2017/super-duper-app:2 --image-pull-policy Always`

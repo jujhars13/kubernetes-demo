@@ -37,4 +37,4 @@ kubectl create secret generic nginx-secret \
 --from-file build/nginx/certs
 
 #run in kubernetes
-kubectl apply -f kubernetes/pod.yml
+#kubectl apply -f kubernetes/pod.yml
