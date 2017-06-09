@@ -10,6 +10,7 @@ spec:
         app: tech-conf-2017
     spec:
       restartPolicy: Always
+
       volumes:
       - name: nginx-secret
         secret:
@@ -19,9 +20,8 @@ spec:
           name: nginx-conf
 
       containers:
-
       - name: nginx
-        image: eu.gcr.io/tech-conf-2017/super-duper-app:2
+        image: eu.gcr.io/tech-conf-2017/super-duper-app:1
         imagePullPolicy: Always
         ports:
         - containerPort: 443

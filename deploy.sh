@@ -8,6 +8,9 @@ if [ -z "$versionNumber" ]; then
   exit 1
 fi
 
+gcloud container clusters get-credentials ${projectName} \
+    --zone europe-west1-c --project ${projectName}
+
 #gcloud auth application-default login
 
 gcloud config set project ${projectName}
