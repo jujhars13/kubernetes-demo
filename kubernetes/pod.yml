@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: tech-conf-2017
 spec:
-  replicas: 1
+  replicas: 6
   template:
     metadata:
       labels:
